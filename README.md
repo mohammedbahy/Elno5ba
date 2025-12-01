@@ -201,14 +201,3 @@ For questions or support, please open an issue on GitHub.
 للأسئلة أو الدعم، يرجى فتح issue على GitHub.
 
 </div>
-
----
-
-Made with ❤️ using Jetpack Compose
-
-<div dir="rtl">
-
-صُنع بـ ❤️ باستخدام Jetpack Compose
-
-</div>
-

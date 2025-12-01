@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">Elno5ba</string>
+    <string name="default_web_client_id">159445060692-v3r8688tkv3uupj8jhifbpmoqol8qmig.apps.googleusercontent.com</string>
+    
+    <!-- Navigation -->
+    <string name="nav_for_you">For You</string>
+    <string name="nav_courses">Courses</string>
+    <string name="nav_favorite">Favorite</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get Started</string>
+    <string name="onboarding_title_1">Start your learning journey</string>
+    <string name="onboarding_description_1">An integrated educational platform for all academic levels</string>
+    <string name="onboarding_title_2">Everything you need in one place</string>
+    <string name="onboarding_description_2">Interactive lessons + simplified explanations + assessment tests</string>
+    <string name="onboarding_title_3">Welcome to the future!</string>
+    <string name="onboarding_description_3">Ready to start your journey? Let\'s get started together!</string>
+    
+    <!-- Auth -->
+    <string name="login_title">Log in</string>
+    <string name="login_email_phone">E-mail or Phone</string>
+    <string name="login_password">Password</string>
+    <string name="login_forget_password">Forget Password?</string>
+    <string name="login_button">Log In</string>
+    <string name="login_or_sign_in_with">Or sign in With</string>
+    <string name="login_google_sign_in">Sign in with Google</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_sign_up">Sign Up</string>
+    <string name="login_error_email_password">Email or password isn\'t correct</string>
+    
+    <string name="signup_title">Sign Up</string>
+    <string name="signup_full_name">Full Name</string>
+    <string name="signup_email">E-mail</string>
+    <string name="signup_phone">Phone Number</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_confirm_password">Confirm Password</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="signup_have_account">Already have an account?</string>
+    <string name="signup_log_in">Log In</string>
+    
+    <string name="password_reset_title">Reset Password</string>
+    <string name="password_reset_message">Enter your email address and we\'ll send you a link to reset your password.</string>
+    <string name="password_reset_email">Email</string>
+    <string name="password_reset_send">Send Reset Link</string>
+    <string name="password_reset_cancel">Cancel</string>
+    <string name="password_reset_success">Password reset email sent successfully!</string>
+    <string name="password_reset_error">Failed to send reset email. Please try again.</string>
+    
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_edit">Edit Profile</string>
+    <string name="profile_language">Language</string>
+    <string name="profile_instructor_portal">Instructor Portal</string>
+    <string name="profile_my_courses">My Courses</string>
+    <string name="profile_help_center">Help Center</string>
+    <string name="profile_logout">Logout</string>
+    <string name="profile_no_email">No email</string>
+    
+    <!-- Language -->
+    <string name="language_title">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_arabic">العربية</string>
+    
+    <!-- Courses -->
+    <string name="courses_title">Courses</string>
+    <string name="courses_count">Courses (%1$d)</string>
+    <string name="courses_error_loading">Error loading courses</string>
+    <string name="courses_no_courses">No courses available</string>
+    <string name="courses_no_courses_message">Courses will appear here once instructors add them</string>
+    <string name="courses_retry">Retry</string>
+    <string name="courses_enrolled">enrolled</string>
+    <string name="courses_egp">EGP</string>
+    
+    <!-- Course Details -->
+    <string name="course_instructor">Instructor</string>
+    <string name="course_read_more">Read More</string>
+    <string name="course_reviews_count">Reviews (%1$d)</string>
+    <string name="course_add_review">Add Review</string>
+    <string name="course_no_reviews">No reviews yet. Be the first to review!</string>
+    <string name="course_start_course">Start Course</string>
+    <string name="course_pay_course">Pay Course - %1$s</string>
+    <string name="course_details_instructor">Instructor</string>
+    <string name="course_details_what_you_get">What You\'ll Get</string>
+    <string name="course_details_reviews">Reviews (%1$d)</string>
+    <string name="course_details_add_review">Add Review</string>
+    <string name="course_details_no_reviews">No reviews yet. Be the first to review!</string>
+    <string name="course_details_start_course">Start Course</string>
+    <string name="course_details_pay_course">Pay Course - %1$s</string>
+    
+    <!-- Favourites -->
+    <string name="favourites_title">Favourites</string>
+    <string name="favourites_count">Favourites (%1$d)</string>
+    <string name="favourites_error_loading">Error loading favorites</string>
+    <string name="favourites_no_courses">No favorite courses yet</string>
+    <string name="favourites_no_courses_message">Add courses to your favorites to see them here</string>
+    <string name="favourites_retry">Retry</string>
+    
+    <!-- Instructor -->
+    <string name="instructor_title">Create Course</string>
+    <string name="instructor_edit_title">Edit Course</string>
+    <string name="instructor_edit_course">Edit Course</string>
+    <string name="instructor_create_course">Create a new course</string>
+    <string name="instructor_updating">Updating...</string>
+    <string name="instructor_submitting">Submitting...</string>
+    <string name="instructor_update_course">Update Course</string>
+    <string name="instructor_submit_course">Submit Course</string>
+    <string name="instructor_course_title">Course Title</string>
+    <string name="instructor_category">Category</string>
+    <string name="instructor_price">Price (EGP)</string>
+    <string name="instructor_description">Description</string>
+    <string name="instructor_cover_image">Cover Image URL</string>
+    <string name="instructor_cover_image_url">Cover Image URL (optional)</string>
+    <string name="instructor_intro_video">Intro Video URL</string>
+    <string name="instructor_intro_video_url">Intro Video URL (optional)</string>
+    <string name="instructor_create_button">Create Course</string>
+    <string name="instructor_update_button">Update Course</string>
+    <string name="instructor_my_courses_title">My Courses</string>
+    <string name="instructor_my_courses">My Courses (%1$d)</string>
+    <string name="instructor_my_courses_count">My Courses (%1$d)</string>
+    <string name="instructor_no_courses">No courses yet</string>
+    <string name="instructor_no_courses_message">Create your first course to get started</string>
+    <string name="instructor_edit">Edit</string>
+    <string name="instructor_delete">Delete</string>
+    <string name="instructor_delete_confirm">Delete Course</string>
+    <string name="instructor_delete_course">Delete Course</string>
+    <string name="instructor_delete_course_message">Are you sure you want to delete \"%1$s\"? This action cannot be undone.</string>
+    <string name="instructor_delete_message">Are you sure you want to delete \"%1$s\"? This action cannot be undone.</string>
+    <string name="instructor_delete_button">Delete</string>
+    <string name="instructor_cancel">Cancel</string>
+    <string name="instructor_no_image">No Image</string>
+    <string name="instructor_students_enrolled">%1$d enrolled</string>
+    
+    <!-- Payment -->
+    <string name="payment_title">Payment</string>
+    <string name="payment_course_price">Course Price</string>
+    <string name="payment_pay_button">Pay</string>
+    
+    <!-- Edit Profile -->
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="edit_profile_full_name">Full Name</string>
+    <string name="edit_profile_nick_name">Nick Name</string>
+    <string name="edit_profile_date_of_birth">Date of Birth</string>
+    <string name="edit_profile_email">Email</string>
+    <string name="edit_profile_phone">Phone Number</string>
+    <string name="edit_profile_gender">Gender</string>
+    <string name="edit_profile_save">Save Changes</string>
+    
+    <!-- Home -->
+    <string name="home_shop_now">Shop Now</string>
+    <string name="home_popular_courses">Our Courses</string>
+    <string name="home_see_all">SEE ALL</string>
+    
+    <!-- Common -->
+    <string name="common_back">Back</string>
+    <string name="common_loading">Loading…</string>
+    <string name="common_error">Error</string>
+    <string name="common_success">Success</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_ok">OK</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_save">Save</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_close">Close</string>
+    
+</resources>

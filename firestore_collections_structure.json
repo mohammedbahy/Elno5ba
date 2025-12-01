@@ -1,0 +1,145 @@
+{
+  "collections": {
+    "userRoles": {
+      "description": "تخزين أدوار المستخدمين (student/instructor)",
+      "documentId": "User ID من Firebase Authentication",
+      "fields": {
+        "userId": {
+          "type": "string",
+          "required": true,
+          "description": "User ID من Firebase Authentication"
+        },
+        "role": {
+          "type": "string",
+          "required": true,
+          "values": ["student", "instructor"],
+          "default": "student",
+          "description": "دور المستخدم في التطبيق"
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "required": true,
+          "description": "تاريخ إنشاء السجل"
+        }
+      },
+      "indexes": [],
+      "sampleDocument": {
+        "userId": "example_user_id_123",
+        "role": "student",
+        "createdAt": "2024-01-01T00:00:00Z"
+      }
+    },
+    "courses": {
+      "description": "تخزين الكورسات المتاحة في التطبيق",
+      "documentId": "Auto-generated (سيتم إنشاؤه تلقائياً)",
+      "fields": {
+        "title": {
+          "type": "string",
+          "required": true,
+          "description": "عنوان الكورس"
+        },
+        "category": {
+          "type": "string",
+          "required": true,
+          "description": "فئة الكورس (مثل: Programming, Design, Business)"
+        },
+        "price": {
+          "type": "number",
+          "required": true,
+          "description": "سعر الكورس بالجنيه المصري"
+        },
+        "description": {
+          "type": "string",
+          "required": true,
+          "description": "وصف تفصيلي للكورس"
+        },
+        "coverImageUrl": {
+          "type": "string",
+          "required": false,
+          "description": "رابط صورة الغلاف للكورس"
+        },
+        "introVideoUrl": {
+          "type": "string",
+          "required": false,
+          "description": "رابط فيديو التعريف للكورس"
+        },
+        "instructorId": {
+          "type": "string",
+          "required": true,
+          "description": "ID المعلم الذي أنشأ الكورس"
+        },
+        "instructorName": {
+          "type": "string",
+          "required": true,
+          "description": "اسم المعلم"
+        },
+        "rating": {
+          "type": "number",
+          "required": false,
+          "default": 0.0,
+          "description": "متوسط تقييم الكورس (0-5)"
+        },
+        "totalRatings": {
+          "type": "number",
+          "required": false,
+          "default": 0,
+          "description": "عدد التقييمات الإجمالي"
+        },
+        "enrolledStudents": {
+          "type": "number",
+          "required": false,
+          "default": 0,
+          "description": "عدد الطلاب المسجلين في الكورس"
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "required": true,
+          "description": "تاريخ إنشاء الكورس"
+        },
+        "updatedAt": {
+          "type": "timestamp",
+          "required": true,
+          "description": "تاريخ آخر تحديث للكورس"
+        },
+        "isPublished": {
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "description": "هل الكورس منشور ومتاح للطلاب"
+        }
+      },
+      "indexes": [
+        {
+          "fields": ["isPublished", "createdAt"],
+          "description": "للبحث عن الكورسات المنشورة مرتبة حسب التاريخ"
+        },
+        {
+          "fields": ["instructorId", "createdAt"],
+          "description": "للبحث عن كورسات معلم معين"
+        }
+      ],
+      "sampleDocument": {
+        "title": "Front-End Development Diploma",
+        "category": "Programming",
+        "price": 1000,
+        "description": "Learn modern front-end development with React, Vue, and Angular",
+        "coverImageUrl": "https://example.com/course-image.jpg",
+        "introVideoUrl": "https://example.com/intro-video.mp4",
+        "instructorId": "instructor_user_id_123",
+        "instructorName": "Ahmed Mohamed",
+        "rating": 4.5,
+        "totalRatings": 120,
+        "enrolledStudents": 500,
+        "createdAt": "2024-01-01T00:00:00Z",
+        "updatedAt": "2024-01-01T00:00:00Z",
+        "isPublished": true
+      }
+    }
+  },
+  "notes": {
+    "autoCreation": "Firestore ينشئ Collections تلقائياً عند إضافة أول document",
+    "security": "تأكد من رفع firestore.rules قبل البدء في استخدام التطبيق",
+    "indexes": "قد تحتاج إلى إنشاء Composite Indexes في Firebase Console للاستعلامات المعقدة"
+  }
+}
+

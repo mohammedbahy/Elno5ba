@@ -1,0 +1,150 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to get user role (safe - returns null if doesn't exist)
+    function getUserRole() {
+      let roleDoc = get(/databases/$(database)/documents/userRoles/$(request.auth.uid));
+      return roleDoc != null && roleDoc.data != null ? roleDoc.data.role : null;
+    }
+    
+    // Helper function to check if user is instructor
+    function isInstructor() {
+      return isAuthenticated() && getUserRole() == 'instructor';
+    }
+    
+    // Helper function to check if user is student
+    function isStudent() {
+      return isAuthenticated() && getUserRole() == 'student';
+    }
+    
+    // User Roles collection
+    match /userRoles/{userId} {
+      // Users can read their own role
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      // Only authenticated users can create their role (first time)
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      // Users cannot update their role (only admins can do this manually)
+      allow update, delete: if false;
+    }
+    
+    // Courses collection
+    match /courses/{courseId} {
+      // Allow authenticated users to read all courses
+      // We'll filter published/unpublished in the app code
+      allow read: if isAuthenticated();
+      
+      // Only instructors can create courses (including videos field)
+      allow create: if isInstructor() && 
+                       request.resource.data.instructorId == request.auth.uid;
+      
+      // Instructors can update any fields on their own courses
+      // This includes updating videos field - instructors can add video URLs
+      allow update: if isInstructor() && 
+                       resource.data.instructorId == request.auth.uid &&
+                       request.resource.data.instructorId == request.auth.uid;
+      
+      // Students are only allowed to increment enrolledStudents by 1
+      // (this is called when a student successfully enrolls in a course)
+      allow update: if isStudent() &&
+                       request.resource.data.enrolledStudents == resource.data.enrolledStudents + 1 &&
+                       request.resource.data.diff(resource.data).changedKeys().hasOnly(["enrolledStudents"]);
+
+      // Only the instructor who owns the course can delete it
+      allow delete: if isInstructor() && 
+                       resource.data.instructorId == request.auth.uid;
+    }
+    
+    // Enrollments collection
+    match /enrollments/{enrollmentId} {
+      // Students can read their own enrollments
+      allow read: if isAuthenticated() && resource.data.studentId == request.auth.uid;
+      // Students can create enrollments (purchase courses)
+      allow create: if isAuthenticated() && 
+                       request.resource.data.studentId == request.auth.uid;
+      // Students can update their own enrollment progress
+      allow update: if isAuthenticated() && 
+                       resource.data.studentId == request.auth.uid &&
+                       request.resource.data.studentId == request.auth.uid;
+      // No one can delete enrollments
+      allow delete: if false;
+    }
+    
+    // Reviews collection
+    match /reviews/{reviewId} {
+      // Anyone authenticated can read reviews
+      allow read: if isAuthenticated();
+      // Students can create reviews for courses they're enrolled in
+      allow create: if isAuthenticated() && 
+                       request.resource.data.studentId == request.auth.uid;
+      // Students can update their own reviews
+      allow update: if isAuthenticated() && 
+                       resource.data.studentId == request.auth.uid &&
+                       request.resource.data.studentId == request.auth.uid;
+      // Students can delete their own reviews
+      allow delete: if isAuthenticated() && 
+                       resource.data.studentId == request.auth.uid;
+    }
+    
+    // Favorites collection
+    match /favorites/{favoriteId} {
+      // Users can read their own favorites
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      // Users can create their own favorites
+      allow create: if isAuthenticated() && 
+                       request.resource.data.userId == request.auth.uid;
+      // Users can delete their own favorites
+      allow delete: if isAuthenticated() && 
+                       resource.data.userId == request.auth.uid;
+      // Users cannot update favorites (only create/delete)
+      allow update: if false;
+    }
+    
+    // User Profiles collection
+    match /userProfiles/{userId} {
+      // Users can read their own profile
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      // Users can create/update their own profile
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection - for storing unencrypted user names (for admin access)
+    match /users/{userId} {
+      // Users can read their own data
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      // Users can create/update their own data
+      allow write: if isAuthenticated() && request.auth.uid == userId;
+      // Allow read for all authenticated users (so admins can see names to change roles)
+      allow read: if isAuthenticated();
+    }
+    
+    // Enrollment Codes collection
+    match /enrollmentCodes/{codeId} {
+      // Anyone authenticated can read codes (to validate)
+      allow read: if isAuthenticated();
+      // Only instructors can create codes (via CourseRepository)
+      allow create: if isInstructor();
+      // Students can mark a code as used exactly once for themselves.
+      // This guarantees that each code is single‑use only.
+      allow update: if isAuthenticated() &&
+                       // Code was not used before
+                       !resource.data.isUsed &&
+                       resource.data.usedBy == null &&
+                       // After update, the code becomes used by the current user
+                       request.resource.data.isUsed == true &&
+                       request.resource.data.usedBy == request.auth.uid;
+      // No one can delete codes
+      allow delete: if false;
+    }
+    
+    // Default: deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

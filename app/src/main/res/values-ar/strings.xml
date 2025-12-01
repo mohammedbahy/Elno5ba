@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">النخبة</string>
+    <string name="default_web_client_id">159445060692-v3r8688tkv3uupj8jhifbpmoqol8qmig.apps.googleusercontent.com</string>
+    
+    <!-- Navigation -->
+    <string name="nav_for_you">لك</string>
+    <string name="nav_courses">الكورسات</string>
+    <string name="nav_favorite">المفضلة</string>
+    <string name="nav_profile">الملف الشخصي</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_skip">تخطي</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_get_started">ابدأ الآن</string>
+    <string name="onboarding_title_1">ابدأ رحلتك التعليمية</string>
+    <string name="onboarding_description_1">منصة تعليمية متكاملة لجميع المستويات الأكاديمية</string>
+    <string name="onboarding_title_2">كل ما تحتاجه في مكان واحد</string>
+    <string name="onboarding_description_2">دروس تفاعلية + شروحات مبسطة + اختبارات تقييمية</string>
+    <string name="onboarding_title_3">مرحباً بك في المستقبل!</string>
+    <string name="onboarding_description_3">هل أنت مستعد لبدء رحلتك؟ لنبدأ معاً!</string>
+    
+    <!-- Auth -->
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="login_email_phone">البريد الإلكتروني أو رقم الهاتف</string>
+    <string name="login_password">كلمة المرور</string>
+    <string name="login_forget_password">نسيت كلمة المرور؟</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="login_or_sign_in_with">أو سجل الدخول باستخدام</string>
+    <string name="login_google_sign_in">تسجيل الدخول بحساب Google</string>
+    <string name="login_no_account">ليس لديك حساب؟</string>
+    <string name="login_sign_up">إنشاء حساب</string>
+    <string name="login_error_email_password">البريد الإلكتروني أو كلمة المرور غير صحيحة</string>
+    
+    <string name="signup_title">إنشاء حساب</string>
+    <string name="signup_full_name">الاسم الكامل</string>
+    <string name="signup_email">البريد الإلكتروني</string>
+    <string name="signup_phone">رقم الهاتف</string>
+    <string name="signup_password">كلمة المرور</string>
+    <string name="signup_confirm_password">تأكيد كلمة المرور</string>
+    <string name="signup_button">إنشاء حساب</string>
+    <string name="signup_have_account">لديك حساب بالفعل؟</string>
+    <string name="signup_log_in">تسجيل الدخول</string>
+    
+    <string name="password_reset_title">إعادة تعيين كلمة المرور</string>
+    <string name="password_reset_message">أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطاً لإعادة تعيين كلمة المرور.</string>
+    <string name="password_reset_email">البريد الإلكتروني</string>
+    <string name="password_reset_send">إرسال رابط إعادة التعيين</string>
+    <string name="password_reset_cancel">إلغاء</string>
+    <string name="password_reset_success">تم إرسال بريد إعادة تعيين كلمة المرور بنجاح!</string>
+    <string name="password_reset_error">فشل إرسال بريد إعادة التعيين. يرجى المحاولة مرة أخرى.</string>
+    
+    <!-- Profile -->
+    <string name="profile_title">الملف الشخصي</string>
+    <string name="profile_edit">تعديل الملف الشخصي</string>
+    <string name="profile_language">اللغة</string>
+    <string name="profile_instructor_portal">بوابة المعلم</string>
+    <string name="profile_my_courses">كورساتي</string>
+    <string name="profile_help_center">مركز المساعدة</string>
+    <string name="profile_logout">تسجيل الخروج</string>
+    <string name="profile_no_email">لا يوجد بريد إلكتروني</string>
+    
+    <!-- Language -->
+    <string name="language_title">اللغة</string>
+    <string name="language_english">English</string>
+    <string name="language_arabic">العربية</string>
+    
+    <!-- Courses -->
+    <string name="courses_title">الكورسات</string>
+    <string name="courses_count">الكورسات (%1$d)</string>
+    <string name="courses_error_loading">خطأ في تحميل الكورسات</string>
+    <string name="courses_no_courses">لا توجد كورسات متاحة</string>
+    <string name="courses_no_courses_message">ستظهر الكورسات هنا بمجرد إضافة المعلمين لها</string>
+    <string name="courses_retry">إعادة المحاولة</string>
+    <string name="courses_enrolled">مسجل</string>
+    <string name="courses_egp">جنيه</string>
+    
+    <!-- Course Details -->
+    <string name="course_instructor">المعلم</string>
+    <string name="course_read_more">اقرأ المزيد</string>
+    <string name="course_reviews_count">التقييمات (%1$d)</string>
+    <string name="course_add_review">إضافة تقييم</string>
+    <string name="course_no_reviews">لا توجد تقييمات بعد. كن أول من يقيم!</string>
+    <string name="course_start_course">بدء الكورس</string>
+    <string name="course_pay_course">دفع الكورس - %1$s</string>
+    <string name="course_details_instructor">المعلم</string>
+    <string name="course_details_what_you_get">ما ستحصل عليه</string>
+    <string name="course_details_reviews">التقييمات (%1$d)</string>
+    <string name="course_details_add_review">إضافة تقييم</string>
+    <string name="course_details_no_reviews">لا توجد تقييمات بعد. كن أول من يقيم!</string>
+    <string name="course_details_start_course">بدء الكورس</string>
+    <string name="course_details_pay_course">دفع الكورس - %1$s</string>
+    
+    <!-- Favourites -->
+    <string name="favourites_title">المفضلة</string>
+    <string name="favourites_count">المفضلة (%1$d)</string>
+    <string name="favourites_error_loading">خطأ في تحميل المفضلة</string>
+    <string name="favourites_no_courses">لا توجد كورسات مفضلة بعد</string>
+    <string name="favourites_no_courses_message">أضف الكورسات إلى مفضلتك لرؤيتها هنا</string>
+    <string name="favourites_retry">إعادة المحاولة</string>
+    
+    <!-- Instructor -->
+    <string name="instructor_title">إنشاء كورس</string>
+    <string name="instructor_edit_title">تعديل الكورس</string>
+    <string name="instructor_edit_course">تعديل الكورس</string>
+    <string name="instructor_create_course">إنشاء كورس جديد</string>
+    <string name="instructor_updating">جاري التحديث...</string>
+    <string name="instructor_submitting">جاري الإرسال...</string>
+    <string name="instructor_update_course">تحديث الكورس</string>
+    <string name="instructor_submit_course">إرسال الكورس</string>
+    <string name="instructor_course_title">عنوان الكورس</string>
+    <string name="instructor_category">الفئة</string>
+    <string name="instructor_price">السعر (جنيه)</string>
+    <string name="instructor_description">الوصف</string>
+    <string name="instructor_cover_image">رابط صورة الغلاف</string>
+    <string name="instructor_cover_image_url">رابط صورة الغلاف (اختياري)</string>
+    <string name="instructor_intro_video">رابط فيديو التعريف</string>
+    <string name="instructor_intro_video_url">رابط فيديو التعريف (اختياري)</string>
+    <string name="instructor_create_button">إنشاء الكورس</string>
+    <string name="instructor_update_button">تحديث الكورس</string>
+    <string name="instructor_my_courses_title">كورساتي</string>
+    <string name="instructor_my_courses">كورساتي (%1$d)</string>
+    <string name="instructor_my_courses_count">كورساتي (%1$d)</string>
+    <string name="instructor_no_courses">لا توجد كورسات بعد</string>
+    <string name="instructor_no_courses_message">أنشئ أول كورس لك للبدء</string>
+    <string name="instructor_edit">تعديل</string>
+    <string name="instructor_delete">حذف</string>
+    <string name="instructor_delete_confirm">حذف الكورس</string>
+    <string name="instructor_delete_course">حذف الكورس</string>
+    <string name="instructor_delete_course_message">هل أنت متأكد من حذف \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="instructor_delete_message">هل أنت متأكد من حذف \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="instructor_delete_button">حذف</string>
+    <string name="instructor_cancel">إلغاء</string>
+    <string name="instructor_no_image">لا توجد صورة</string>
+    <string name="instructor_students_enrolled">%1$d مسجل</string>
+    
+    <!-- Payment -->
+    <string name="payment_title">الدفع</string>
+    <string name="payment_course_price">سعر الكورس</string>
+    <string name="payment_pay_button">دفع</string>
+    
+    <!-- Edit Profile -->
+    <string name="edit_profile_title">تعديل الملف الشخصي</string>
+    <string name="edit_profile_full_name">الاسم الكامل</string>
+    <string name="edit_profile_nick_name">الاسم المستعار</string>
+    <string name="edit_profile_date_of_birth">تاريخ الميلاد</string>
+    <string name="edit_profile_email">البريد الإلكتروني</string>
+    <string name="edit_profile_phone">رقم الهاتف</string>
+    <string name="edit_profile_gender">الجنس</string>
+    <string name="edit_profile_save">حفظ التغييرات</string>
+    
+    <!-- Home -->
+    <string name="home_shop_now">تسوق الآن</string>
+    <string name="home_popular_courses">كورساتنا</string>
+    <string name="home_see_all">عرض الكل</string>
+    
+    <!-- Common -->
+    <string name="common_back">رجوع</string>
+    <string name="common_loading">جاري التحميل…</string>
+    <string name="common_error">خطأ</string>
+    <string name="common_success">نجح</string>
+    <string name="common_cancel">إلغاء</string>
+    <string name="common_ok">موافق</string>
+    <string name="common_yes">نعم</string>
+    <string name="common_no">لا</string>
+    <string name="common_save">حفظ</string>
+    <string name="common_delete">حذف</string>
+    <string name="common_edit">تعديل</string>
+    <string name="common_close">إغلاق</string>
+    
+</resources>
+
